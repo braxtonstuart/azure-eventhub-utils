@@ -4,7 +4,7 @@ export async function writeEventsToConsole(message: unknown, context: Invocation
     context.log(message.toString());
 }
 
-app.eventHub('read', {
+app.eventHub('writeEventsToConsole', {
     connection: 'AZURE_EVENT_HUB_CONNECTION_STRING',
     eventHubName: '',
     cardinality: 'one',
